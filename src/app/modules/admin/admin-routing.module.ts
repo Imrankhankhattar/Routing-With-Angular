@@ -7,14 +7,16 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 
 const routes: Routes = [
-  { path: '', component: AdminDashboardComponent,children:[
-    { path: 'home', component: HomeComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'services', component: ServicesComponent },
-    { path: '', redirectTo: 'admin/home', pathMatch: 'full' },
-  ] }
-  
+  {
+    path: '', component: AdminDashboardComponent, children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'services', component: ServicesComponent },
+      { path: '', redirectTo: 'admin/home', pathMatch: 'full' },
+    ]
+  }
+
 ];
 
 @NgModule({
